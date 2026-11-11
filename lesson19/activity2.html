@@ -3,6 +3,19 @@
      
 <body>
     <p>a function can accses variables defined inside the function</p>
-    <button type="button" oneclick="myfunction()"</button>
+    <button type="button" oneclick="myfunction()"> CLICK ME!</button>
+    <P id="demo"></P>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        var b = 5;
+        function myFunction() {
+            var a = 4;
+            document.getElementById("demo").innerHTML = b * a;
+        }
+         document.getElementById("demo1").innerHTML = a;
+         document.getElementById("demo2").innerHTML = b;
+
+    </script>
 </body>
 </html>
