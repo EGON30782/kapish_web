@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>     
+<head>
+  <title>my zoo</title>
+  <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: aliceblue;
+        text-align: center;
+        padding: 30px;
+    }
+
+    h1 {
+        color: orange;
+    }
+
+    #zoo {
+        border: 2px solid chocolate;
+        width: 300px;
+        margin: 16px auto;
+        padding: 12px;
+        border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+    <h1>my zoo</h1>
+    <p> use javascript and the DOM to add animals to each cage!</p>
+
+    <!--
+        dom tree: zoo is a the parent element node.
+        zone divs are child element nodes. animal names inside each span are text nodes
+    -->
+
+    <div id="zoo">
+        <div class="zone">zone 1: <span id="zone 1"></span></div>
+        <div class="zone">zone 2: <span id="zone 2"></span></div>
+        <div class="zone">zone 3: <span id="zone 3"></span></div>
+        <div class="zone">total animals: <span id="total"></span></div>
+    </div>
+    <br>
+
+    <button oneclick="openzoo()">open the zoo!</button>
+    <p id="zoo-status"></p>
+</body>
+</html>
