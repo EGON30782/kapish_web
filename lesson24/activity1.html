@@ -35,7 +35,56 @@
     <button onclick="showprofile()">show profile</button>
     <div>name: <span id="name"></span></div>
     <div>score<span id="score"></span></div>
-    <div>record: <span id="record"></span></div>
-    <div>name: <span id="name"></span></div>
+    <div>top score: <span id="top score"></span></div>
+    <div>rank: <span id="rank"></span></div>
+    <div>greetings: <span id="greetings"></span></div>
+    <div>stars: <span id="stars"></span></div>
+    <div>bonus level: <span id="bonus"></span></div>
+    <div>team name: <span id="team"></span></div>
+
+     <script>
+         function showprofile() {
+            //variables
+            let name = "kapish";
+            let myscore = 50;
+            let highscore = 150;
+            let bonus = null
+            let team;
+
+            // comparision oprator
+            let istopscore = myscore == highscore
+
+            // if / else - rank
+            let rank;
+            if (myscore >= 80) {
+                rank = "gold";
+            } else if (myscore >= 50) {
+                rank = "silver";
+            } else {
+                rank = "bronze";
+            }
+
+            // date object - greetings
+            let hour = new Data().gethours();
+            let greeting;
+            if (hour < 12) {
+                greeting = "good morning!";
+            } else if (hour < 17) {
+                greeting = "good afternoon!";
+            } else {
+                greeting = "good evening!";
+            }
+
+            // while loop - stars
+            let stars = "";
+            let count = 0;
+            while (count < 5){
+                stars = stars +"* ";
+                count = count + 1;
+            }
+            
+        } 
+     </script>         
 </body>
+
 </html>
